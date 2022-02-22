@@ -44,13 +44,13 @@ final class ConfirmTest extends TestCase
 
     public function testPropertiesAreCorrectlySet()
     {
-	    $question = new Confirm('continue', 'Do you want to continue?');
+        $question = new Confirm('continue', 'Do you want to continue?');
         $this->assertEquals('continue', $question->getName());
     }
 
     public function testConfirmQuestionDisplaysPromptTextToOutput()
     {
-	    $question = new Confirm('continue', 'Do you want to continue?');
+        $question = new Confirm('continue', 'Do you want to continue?');
 
         $ignored = $question->prompt($this->input, $this->output);
 
@@ -66,7 +66,7 @@ final class ConfirmTest extends TestCase
      */
     public function testConfirmQuestionReturnsExpectedBooleanForInput($expected, $input)
     {
-	    $question = new Confirm('continue', 'Do you want to continue?');
+        $question = new Confirm('continue', 'Do you want to continue?');
 
         // Write some text in the input stream.
         fwrite($this->input, $input . PHP_EOL);
@@ -81,12 +81,12 @@ final class ConfirmTest extends TestCase
     {
         return [
             'empty input returns true' => [true, ''],
-	        'lowercase \'yes\' returns true' => [true, 'yes'],
-	        'uppercase \'YES\' returns true' => [true, 'YES'],
-	        'mixed-case \'yEs\' returns true' => [true, 'yEs'],
-	        'lowercase \'no\' returns false' => [false, 'no'],
-	        'uppercase \'NO\' returns false' => [false, 'NO'],
-	        'mixed-case \'nO\' returns false' => [false, 'nO'],
+            'lowercase \'yes\' returns true' => [true, 'yes'],
+            'uppercase \'YES\' returns true' => [true, 'YES'],
+            'mixed-case \'yEs\' returns true' => [true, 'yEs'],
+            'lowercase \'no\' returns false' => [false, 'no'],
+            'uppercase \'NO\' returns false' => [false, 'NO'],
+            'mixed-case \'nO\' returns false' => [false, 'nO'],
         ];
     }
 }

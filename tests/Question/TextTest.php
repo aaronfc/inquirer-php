@@ -44,13 +44,13 @@ final class TextTest extends TestCase
 
     public function testPropertiesAreCorrectlySet()
     {
-	    $question = new Text('name', 'What is your name?');
+        $question = new Text('name', 'What is your name?');
         $this->assertEquals('name', $question->getName());
     }
 
     public function testTextQuestionDisplaysPromptTextToOutput()
     {
-	    $question = new Text('name', 'What is your name?');
+        $question = new Text('name', 'What is your name?');
 
         $ignored = $question->prompt($this->input, $this->output);
 
@@ -63,7 +63,7 @@ final class TextTest extends TestCase
 
     public function testTextQuestionReturnsAnswerFromInput()
     {
-	    $question = new Text('name', 'What is your name?');
+        $question = new Text('name', 'What is your name?');
 
         // Write some text in the input stream.
         fwrite($this->input, 'Aarón Fas' . PHP_EOL);
