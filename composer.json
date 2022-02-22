@@ -30,7 +30,9 @@
     "format": [
       "php-cs-fixer fix src/",
       "php-cs-fixer fix tests/"
-    ]
+    ],
+    "post-install-cmd": "cghooks add --ignore-lock",
+    "post-update-cmd": "cghooks update"
   },
   "extra": {
     "hooks": {
