@@ -6,11 +6,10 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-    - name: Install dependencies
-      uses: php-actions/composer@v5
-    - name: PHPUnit Tests
-      uses: php-actions/phpunit@v3
-
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        uses: php-actions/composer@v5
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@v3
