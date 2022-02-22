@@ -1,34 +1,42 @@
 {
-    "name": "aaron/inquirer-php",
-    "description": "Inquirer.js clone in PHP.",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Aaron\\InquirerPhp\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "aaron",
-            "email": "yo@aaron.com.es"
-        }
-    ],
-    "require-dev": {
-        "phpunit/phpunit": "^9",
-        "friendsofphp/php-cs-fixer": "^3.6"
-    },
-    "scripts": {
-        "test": [
-            "phpunit --testdox --color=always"
-        ],
-        "test:coverage": [
-            "@putenv XDEBUG_MODE=coverage",
-            "phpunit --color=always"
-        ],
-        "format": [
-            "php-cs-fixer fix src/",
-            "php-cs-fixer fix tests/"
-        ]
+  "name": "aaron/inquirer-php",
+  "description": "Inquirer.js clone in PHP.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Aaron\\InquirerPhp\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "aaron",
+      "email": "yo@aaron.com.es"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "friendsofphp/php-cs-fixer": "^3.6",
+    "brainmaestro/composer-git-hooks": "^2.8"
+  },
+  "scripts": {
+    "test": [
+      "phpunit --testdox --color=always"
+    ],
+    "test:coverage": [
+      "@putenv XDEBUG_MODE=coverage",
+      "phpunit --color=always"
+    ],
+    "format": [
+      "php-cs-fixer fix src/",
+      "php-cs-fixer fix tests/"
+    ]
+  },
+  "extra": {
+    "hooks": {
+      "pre-commit": [
+        "composer format"
+      ]
+    }
+  }
 }
