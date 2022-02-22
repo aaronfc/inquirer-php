@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b0d5517bd3fb5c18d185445ea60ec7a4",
+    "content-hash": "f69419929f79585a3239ceab60ca113e",
     "packages": [],
     "packages-dev": [
         {
@@ -60,16 +60,16 @@
         },
         {
             "name": "ccinn/husky-php",
-            "version": "v0.3.1",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/whiteCcinn/husky-php.git",
-                "reference": "e637b92a7785bc0c50c38e97577fcbc3a2c40b5f"
+                "reference": "0300117edf755d96bf42042e8888df1296846070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/whiteCcinn/husky-php/zipball/e637b92a7785bc0c50c38e97577fcbc3a2c40b5f",
-                "reference": "e637b92a7785bc0c50c38e97577fcbc3a2c40b5f",
+                "url": "https://api.github.com/repos/whiteCcinn/husky-php/zipball/0300117edf755d96bf42042e8888df1296846070",
+                "reference": "0300117edf755d96bf42042e8888df1296846070",
                 "shasum": ""
             },
             "require": {
@@ -103,9 +103,9 @@
             ],
             "support": {
                 "issues": "https://github.com/whiteCcinn/husky-php/issues",
-                "source": "https://github.com/whiteCcinn/husky-php/tree/v0.3.1"
+                "source": "https://github.com/whiteCcinn/husky-php/tree/v0.2.1"
             },
-            "time": "2021-08-17T09:15:05+00:00"
+            "time": "2021-08-17T09:16:22+00:00"
         },
         {
             "name": "ccinn/php-cs-fixer-config",

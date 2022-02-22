@@ -18,7 +18,7 @@
         "phpunit/phpunit": "^9",
         "friendsofphp/php-cs-fixer": "2.19.3",
         "ccinn/composer-husky-plugin": "^0.2.0",
-        "ccinn/husky-php": "^0.3.1"
+        "ccinn/husky-php": "0.2.1"
     },
     "scripts": {
         "test": [
