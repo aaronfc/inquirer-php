@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  */
 final class ConfirmTest extends TestCase
 {
-    public const SOME_MAX_LENGTH = 1024;       
+    public const SOME_MAX_LENGTH = 1024;
 
     /**
      * @var resource
