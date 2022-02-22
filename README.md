@@ -1,4 +1,5 @@
 # inquirer-php
+![Code Coverage Badge](./coverage-badge.svg)
 
 ```php
 <?php

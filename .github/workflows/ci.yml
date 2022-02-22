@@ -13,3 +13,11 @@ jobs:
         uses: php-actions/composer@v5
       - name: PHPUnit Tests
         run: composer run test
+      - name: PHPUnit Tests Coverage
+        run: composer run test:coverage
+      - name: Generate Test Coverage Badge
+        uses: timkrase/phpunit-coverage-badge@v1.2.0
+        with:
+          coverage_badge_path: coverage-badge.svg
+          push_badge: true
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
