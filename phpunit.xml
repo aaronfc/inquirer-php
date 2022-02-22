@@ -29,6 +29,7 @@
         </exclude>
         <report>
             <html outputDirectory="build/coverage-report/"/>
+            <clover outputFile="clover.xml" />
         </report>
     </coverage>
 </phpunit>

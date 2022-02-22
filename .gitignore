@@ -2,3 +2,4 @@
 /build/
 /.phpunit.cache/
 .php_cs.cache
+clover.xml
