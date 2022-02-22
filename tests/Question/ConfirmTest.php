@@ -44,15 +44,15 @@ final class ConfirmTest extends TestCase
 
     public function testPropertiesAreCorrectlySet()
     {
-        $text = new Confirm('continue', 'Do you want to continue?');
-        $this->assertEquals('continue', $text->getName());
+	    $question = new Confirm('continue', 'Do you want to continue?');
+        $this->assertEquals('continue', $question->getName());
     }
 
     public function testConfirmQuestionDisplaysPromptTextToOutput()
     {
-        $text = new Confirm('continue', 'Do you want to continue?');
+	    $question = new Confirm('continue', 'Do you want to continue?');
 
-        $ignored = $text->prompt($this->input, $this->output);
+        $ignored = $question->prompt($this->input, $this->output);
 
         // Read contents from output stream.
         rewind($this->output);
@@ -64,29 +64,29 @@ final class ConfirmTest extends TestCase
     /**
      * @dataProvider data_testConfirmQuestionReturnsExpectedBooleanForInput
      */
-    public function testConfirmQuestionReturnsExpectedBooleanForInput($expected, $input, $case)
+    public function testConfirmQuestionReturnsExpectedBooleanForInput($expected, $input)
     {
-        $text = new Confirm('continue', 'Do you want to continue?');
+	    $question = new Confirm('continue', 'Do you want to continue?');
 
         // Write some text in the input stream.
         fwrite($this->input, $input . PHP_EOL);
         rewind($this->input);
 
-        $answer = $text->prompt($this->input, $this->output);
+        $answer = $question->prompt($this->input, $this->output);
 
-        $this->assertEquals($expected, $answer, $case);
+        $this->assertEquals($expected, $answer);
     }
 
     public function data_testConfirmQuestionReturnsExpectedBooleanForInput()
     {
         return [
-            [true, '', 'Empty input returns true'],
-            [true, 'yes', 'Lowercase \'yes\' returns true'],
-            [true, 'YES', 'Uppercase \'yes\' returns true'],
-            [true, 'yEs', 'Mixed-case \'yes\' returns true'],
-            [false, 'no', 'Lowercase \'no\' returns false'],
-            [false, 'NO', 'Uppercase \'no\' returns false'],
-            [false, 'nO', 'Mixed-case \'no\' returns false'],
+            'empty input returns true' => [true, ''],
+	        'lowercase \'yes\' returns true' => [true, 'yes'],
+	        'uppercase \'YES\' returns true' => [true, 'YES'],
+	        'mixed-case \'yEs\' returns true' => [true, 'yEs'],
+	        'lowercase \'no\' returns false' => [false, 'no'],
+	        'uppercase \'NO\' returns false' => [false, 'NO'],
+	        'mixed-case \'nO\' returns false' => [false, 'nO'],
         ];
     }
 }
